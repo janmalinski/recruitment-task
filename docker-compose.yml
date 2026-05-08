@@ -1,0 +1,10 @@
+services:
+  weather-ranker:
+    build: .
+    container_name: weather-ranker
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - .:/app
