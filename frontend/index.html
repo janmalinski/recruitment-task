@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Ranker</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+
+  <body>
+    <main>
+      <h1>Weather Ranker</h1>
+      <p class="subtitle">
+        Ranked cities based on temperature, wind, humidity and cloud cover.
+      </p>
+
+      <section class="filters">
+        <label>
+          Start date
+          <input id="startDate" type="date" />
+        </label>
+
+        <label>
+          End date
+          <input id="endDate" type="date" />
+        </label>
+
+        <button id="getDataButton" type="button">Get Data</button>
+      </section>
+
+      <div id="error" class="error"></div>
+      <div id="meta" class="meta"></div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>City</th>
+              <th>Country</th>
+              <th>Avg Temp</th>
+              <th>Avg Wind</th>
+              <th>Avg Humidity</th>
+              <th>Avg Clouds</th>
+              <th>Temp Score</th>
+              <th>Wind Score</th>
+              <th>Humidity Score</th>
+              <th>Cloud Score</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
